@@ -1,0 +1,26 @@
+var optionMenuApp = angular.module('optionMenuApp', ['ngSanitize']);
+var noticiasApp = angular.module('noticiasApp',
+		[ 'ngRoute', 'noticiasServices' ]);
+
+optionMenuApp.controller('MenuListCtrl', function MenuListCtrl($scope) {
+
+	$scope.options = [ {
+		'name' : 'Organizadores'
+	}, {
+		'name' : 'Eventos'
+	} ];
+
+});
+
+optionMenuApp.controller('ActivityController', function ActivityController(
+		$scope, $http) {
+	$http.get('/gdgopenlima').success(function(data, status) {
+
+		$scope.rpta = data;
+		$scope.status = status;
+	}).error(function(data, status) {
+
+		$scope.rpta = data || "Request failed";
+		$scope.status = status;
+	});
+});

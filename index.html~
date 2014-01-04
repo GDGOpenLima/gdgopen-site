@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="css/main.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans'
+	rel='stylesheet' type='text/css'>
+<link rel="icon" href="images/favicon.ico" type="image">
+<!-- AngularJS -->
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-resource.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="js/controllers.js"></script>
+<!-- AngularJS -->
+<title>GDG Open Lima - Google Developer Group Open Lima</title>
+</head>
+
+<body ng-app="optionMenuApp">
+	<header id="opciones-navegacion">
+		<nav class="barra-lateral">
+			<ul class="dentro-barra-lateral" ng-controller="MenuListCtrl">
+				<li ng-repeat="option in options" class="elemento-nav">
+					<div>{{ option.name }}</div>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<article id="container" style="z-index: 0;">
+		<div class="cuadrado-logos">
+			<div class="gol-logo">
+				<a href="https://plus.google.com/116021360471772072148"
+					target="_blank"> <img alt="GDG Open Lima logo"
+					src="images/gdgopenlima-logo.png">
+				</a>
+			</div>
+			<div class="gd-logo">
+				<a
+					href="https://developers.google.com/groups/chapter/116021360471772072148/"
+					target="_blank"> <img alt="Google Developer logo"
+					src="images/developers-logo.png">
+				</a>
+			</div>
+		</div>
+		<section id="home">
+			<div style="position: relative; height: 75%; left: 20%; width: 100%">
+				<h1 class="titulo-grande">Hola Lima</h1>
+			</div>
+			<div style="position: relative; top: 10px; color: #fff; left: 20%;">
+				<p>Muy pronto tendrás novedades...</p>
+			</div>
+
+		</section>
+
+	</article>
+	<footer id="noticias">
+		<div ng-controller="ActivityController">
+			<div class="dentro-noticias">
+				<ul>
+					<li ng-repeat="item in rpta.items"
+						style="border-top: 1px solid #ff0000">
+						<div ng-bind-html="item.object.content"></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

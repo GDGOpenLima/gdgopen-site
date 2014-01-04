@@ -1,0 +1,119 @@
+body {
+	width: 80%;
+	height: 100%;
+	background-color: #030303;
+	/* background: url("../images/bg_group01.jpg") no-repeat center center	fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;*/
+	background-origin: content-box;
+	font-family: 'Open Sans', sans-serif;
+	font-size: small;
+	background-origin: content-box;
+}
+
+.titulo-grande {
+	color: white;
+	font-size: 4em;
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.cuadrado-logos {
+	z-index: 3;
+	position: absolute;
+	left: 5%;
+	top: 0;
+	width: auto;
+}
+
+.gol-logo {
+	float: left;
+	position: relative;
+	height: 100%;
+	padding: 5px 20px 0;
+	background-color: white;
+	width: 170px;
+	border-radius: 0px 3px 3px 0px;
+	box-shadow: 2px 0 4px 0 rgba(0, 0, 0, 0.7);
+	z-index: 2;
+}
+
+.gd-logo {
+	float: right;
+	background-color: black;
+	position: relative;
+	z-index: 1;
+	width: 170px;
+	background-color: #303030;
+	z-index: 1;
+	width: 170px;
+	padding: 5px 15px 0;
+	border-radius: 0px 3px 3px 0px;
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.7);
+	z-index: 1;
+}
+
+#opciones-navegacion {
+	position: fixed;
+	width: 5%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	float: left;
+	z-index: 1;
+}
+
+
+#opciones-navegacion .barra-lateral {
+	position: relative;
+	top: 0%;
+	left: 0%;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: block;
+	float: left;
+	background-color: #303030;
+	z-index: 4;
+}
+
+#opciones-navegacion .barra-lateral .dentro-barra-lateral {
+	position: relative;
+	top: 0;
+	padding: 0;
+	height: 100%;
+	padding-top: 45px;
+	box-shadow: 4px 0 10px 0px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 4px 0 10px 0px rgba(0, 0, 0, 0.4);
+	z-index: 1;
+}
+
+#opciones-navegacion .barra-lateral .elemento-nav {
+	text-align: center;
+	color: white;
+	font-size: small;
+	width: 72px;
+	height: 72px;
+}
+
+
+#noticias {
+	position: fixed;
+	height: 100%;
+	width: 30%;
+	overflow: hidden;
+	top:0;
+	right:0;
+	z-index:2;
+}
+
+#noticias .dentro-noticias {
+	
+	display: block;
+	float: right;
+	box-shadow: 0 4px 0px 10px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.4);
+	background-color:#f3f3f3;
+}
